@@ -1,0 +1,35 @@
+name: Update Advent of Code Year
+
+on:
+  schedule:
+    # Runs at midnight UTC on January 1st every year
+    - cron: "0 0 1 1 *"
+  workflow_dispatch:
+
+jobs:
+  update-year:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Run update script
+        run: ./update-year.sh
+
+      - name: Commit and push changes
+        env:
+          GH_TOKEN: ${{ secrets.PAT_WORKFLOW }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git remote set-url origin https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+          git add Readme.md
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: bump Advent of Code year to $(date +%Y)"
+            git push origin main
+          else
+            echo -e "No changes detected\nNothing to commit."
+          fi
