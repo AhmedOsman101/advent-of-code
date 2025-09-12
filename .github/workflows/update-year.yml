@@ -2,8 +2,8 @@ name: Update Advent of Code Year
 
 on:
   schedule:
-    # Runs at midnight UTC on January 1st every year
-    - cron: "0 0 1 1 *"
+    # Runs at midnight UTC on December 1st every year
+    - cron: "0 0 12 1 *"
   workflow_dispatch:
 
 jobs:
