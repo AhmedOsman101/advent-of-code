@@ -1,13 +1,13 @@
 # Advent of Code Solutions
 
-This repository contains my solutions to the [Advent of Code](https://adventofcode.com) challenges from **2015** through **2025** (the current edition).
+This repository contains my solutions to the [Advent of Code](https://adventofcode.com) challenges from **2015** through **2024** (the current edition).
 
 Each programming language I use will have its own dedicated branch for clarity and organization.
 The **`main`** branch only contains this README file and serves as an index/overview of the project.
 
 ## Structure
 
-- **2015–2025**: Each year's problems solved in one or more languages.
+- **2015–2024**: Each year's problems solved in one or more languages.
 - **Branches**:
   - `typescript` — Solutions in TypeScript
   - `rust` — Solutions in Rust
