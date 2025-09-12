@@ -26,5 +26,5 @@ jobs:
             git commit -m "chore: bump Advent of Code year to $(date +%Y)"
             git push
           else
-            echo -e "No changes detected\nNothing to commit."
+            printf "No changes detected\nNothing to commit.\n"
           fi
