@@ -1,6 +1,6 @@
-# Advent of Code Solutions – {{LANGUAGE}}
+# Advent of Code Solutions – Rust
 
-This branch contains my solutions to the [Advent of Code](https://adventofcode.com) challenges implemented in **{{LANGUAGE}}**.
+This branch contains my solutions to the [Advent of Code](https://adventofcode.com) challenges implemented in **Rust**.
 
 ## Structure
 
@@ -19,7 +19,7 @@ This branch contains my solutions to the [Advent of Code](https://adventofcode.c
 
 ## Goals for this branch
 
-- Solve each Advent of Code puzzle using idiomatic **{{LANGUAGE}}** code.
+- Solve each Advent of Code puzzle using idiomatic **Rust** code.
 - Demonstrate clean, efficient, and maintainable solutions.
 - Optionally compare approaches with other language branches.
 
