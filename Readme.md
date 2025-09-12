@@ -4,7 +4,7 @@ This branch contains my solutions to the [Advent of Code](https://adventofcode.c
 
 ## Structure
 
-- **Years**: Solutions for each year from **2015** through **2025**.
+- **Years**: Solutions for each year from **2015** through **2024**.
 - **Folder layout**:
 
 ```
@@ -12,7 +12,7 @@ This branch contains my solutions to the [Advent of Code](https://adventofcode.c
 ├── 2016/
 ├── 2017/
 ...
-└── 2025/
+└── 2024/
 ```
 
 - Each folder contains the corresponding day's puzzles and solutions.
