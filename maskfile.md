@@ -10,7 +10,7 @@ It's recommended to have a `src/` directory for better code organization
 [[ -d "./src" ]] && cd src
 mkdir -p "${year}/day-${day}" &>/dev/null
 cd "${year}/day-${day}"
-aoc download --year "${year}" --day "${day}" --input-file input.txt
+aoc download --overwrite --year "${year}" --day "${day}" --input-file input.txt
 ```
 
 ## submit (answer)
