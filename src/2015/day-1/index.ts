@@ -24,6 +24,8 @@ function partTwo() {
     console.error(`An Error happened: ${(e as Error).message}`);
   }
 }
+
+partOne();
 partTwo();
 
 export { partOne, partTwo };
