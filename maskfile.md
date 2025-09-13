@@ -7,10 +7,14 @@
 It's recommended to have a `src/` directory for better code organization
 
 ```bash
-[[ -d "./src" ]] && cd src
+[[ -d "src" ]] && cd src
+
 mkdir -p "${year}/day-${day}" &>/dev/null
 cd "${year}/day-${day}"
-aoc download --year "${year}" --day "${day}" --input-file input.txt
+
+[[ -f 'index.ts' ]] || cat "$(git rev-parse --show-toplevel)/templates/day.ts" >index.ts
+
+aoc download --overwrite --year "${year}" --day "${day}" --input-file input.txt
 ```
 
 ## submit (answer)
