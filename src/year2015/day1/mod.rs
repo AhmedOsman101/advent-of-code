@@ -19,7 +19,7 @@ pub fn part2() -> usize {
   let mut target = 0;
   for (position, char) in input.chars().enumerate() {
     if floor == -1 {
-      target = position + 1;
+      target = position;
       break;
     }
     if char == '(' {
