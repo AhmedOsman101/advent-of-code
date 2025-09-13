@@ -55,5 +55,31 @@ cmd+=("${part}" "${answer}")
 
 ```bash
 [[ -d "src" ]] && cd src
-frogmouth "./year${year}/day${day}/puzzle.md"
+frogmouth "${year}/day-${day}/puzzle.md"
+```
+
+## run
+
+> Runs the puzzle solution for the given day and year.
+
+**OPTIONS**
+
+- year
+  - flags: -y --year
+  - type: number
+  - desc: Puzzle year
+  - required
+- day
+  - flags: -d --day
+  - type: number
+  - desc: Puzzle day
+  - required
+
+```bash
+[[ -d "src" ]] && cd src
+
+mkdir -p "${year}/day-${day}" &>/dev/null
+cd "${year}/day-${day}"
+
+[[ -f 'index.ts' ]] && deno run -A index.ts
 ```
