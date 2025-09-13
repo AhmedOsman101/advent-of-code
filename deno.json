@@ -1,4 +1,12 @@
 {
-  "tasks": {},
-  "imports": {}
+  "tasks": {
+    "lint": "deno run -A npm:@biomejs/biome lint .",
+    "format": "deno run -A npm:@biomejs/biome check --fix .",
+    "format:unsafe": "deno run -A npm:@biomejs/biome check --fix --unsafe .",
+    "prepare": "husky || true"
+  },
+  "imports": {
+    "@biomejs/biome": "npm:@biomejs/biome@2.0.5",
+    "husky": "npm:husky@^9.1.7"
+  }
 }
