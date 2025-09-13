@@ -1,6 +1,6 @@
 function partOne() {
   try {
-    const input = Deno.readTextFileSync("input.txt");
+    const input = Deno.readTextFileSync("input.txt").trim();
   } catch (e) {
     console.error(`An Error happened: ${(e as Error).message}`);
   }
@@ -8,7 +8,7 @@ function partOne() {
 
 function partTwo() {
   try {
-    const input = Deno.readTextFileSync("input.txt");
+    const input = Deno.readTextFileSync("input.txt").trim();
   } catch (e) {
     console.error(`An Error happened: ${(e as Error).message}`);
   }
