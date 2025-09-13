@@ -1,26 +1,8 @@
+use crate::bubble_sort;
 use std::fs::File;
 use std::io::{BufRead, BufReader};
 
-fn bubble_sort<T: Ord>(numbers: &mut [T]) {
-  let len = numbers.len();
-  for i in 0..len {
-    let mut swapped = false;
-
-    for j in 0..len - i - 1 {
-      if numbers[j] > numbers[j + 1] {
-        numbers.swap(j, j + 1);
-        swapped = true;
-      }
-    }
-
-    if !swapped {
-      break;
-    }
-  }
-}
-
 pub fn part1() -> Result<i32, String> {
-  // let input = fs::read_to_string("src/year2015/day2/input.txt").expect("input file missing");
   // Open the file
   let file = File::open("src/year2015/day2/input.txt").expect("input file missing");
   // Wrap it in a buffered reader
