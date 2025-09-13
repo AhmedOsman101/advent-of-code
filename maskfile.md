@@ -44,3 +44,12 @@ cmd+=("${part}" "${answer}")
 
 "${cmd[@]}"
 ```
+
+## view (year) (day)
+
+> Preview the puzzle for the given day and year using `frogmouth`.
+
+```bash
+[[ -d "src" ]] && cd src
+frogmouth "./year${year}/day${day}/puzzle.md"
+```
